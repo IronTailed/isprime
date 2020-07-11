@@ -7,6 +7,7 @@ def checklist(x,list1):
 			pass
 	return tf
 
+#so I just realized that checklist() and checkfactor are the same thing ^_^
 
 def checkfactor(x, list1):
 	tf = False
@@ -34,7 +35,11 @@ def isprime():
 				prime = True
 				maximum = 2
 				count = 0 
+				if x % 10 == 5 or x % 10 == 0:
+						prime = False
 				for n in range(1, round((x+1)/maximum), 2):
+					if prime == False:
+						break
 					count += 1
 					if list1 != []:
 						maximum = max(list1)
